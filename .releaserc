@@ -2,14 +2,14 @@ plugins:
   - - "@semantic-release/commit-analyzer"
     - "preset": "conventionalcommits"
       "releaseRules":
-       - {"type": "feat", "release": "patch"}
+       - {"type": "feat", "release": "minor"}
   - - "@semantic-release/release-notes-generator"
     - "preset": "conventionalcommits"
       "presetConfig": 
         "types":
         - {"type": "feat", "section": "Features"}
   - - "@semantic-release/changelog"
-    - "changelogFile": "ReleaseNotes.md"
+    - "changelogFile": "BaseReleaseNotes.md"
   - - "@semantic-release/git"
     - assets:
         - ReleaseNotes.md
