@@ -1,0 +1,17 @@
+plugins:
+  - - "@semantic-release/commit-analyzer"
+    - "preset": "conventionalcommits"
+      "releaseRules":
+       - {"type": "feat", "release": "patch"}
+  - - "@semantic-release/release-notes-generator"
+    - "preset": "conventionalcommits"
+      "presetConfig": 
+        "types":
+        - {"type": "feat", "section": "Features"}
+  - - "@semantic-release/changelog"
+    - "changelogFile": "ReleaseNotes.md"
+  - - "@semantic-release/git"
+    - assets:
+        - ReleaseNotes.md
+branches: 
+ - main
