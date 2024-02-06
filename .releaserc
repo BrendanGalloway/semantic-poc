@@ -14,4 +14,4 @@ plugins:
     - assets:
         - ReleaseNotes.md
 branches: 
- - main
+ - dev-base
