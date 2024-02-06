@@ -5,7 +5,7 @@ plugins:
        - {"type": "feat", "release": "patch"}
   - - "@semantic-release/release-notes-generator"
     - "preset": "conventionalcommits"
-      "presetConfig": 
+      "presetConfig":
         "types":
         - {"type": "feat", "section": "Features"}
   - - "@semantic-release/changelog"
@@ -13,5 +13,5 @@ plugins:
   - - "@semantic-release/git"
     - assets:
         - ReleaseNotes.md
-branches: 
+branches:
  - main
