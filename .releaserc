@@ -1,17 +1,19 @@
 plugins:
+  - - "@semantic-release/exec"
+    - "prepareCmd": "echo ${lastRelease.gitTag}"
   - - "@semantic-release/commit-analyzer"
     - "preset": "conventionalcommits"
       "releaseRules":
-       - {"type": "feat", "release": "minor"}
+       - {"type": "feat", "release": "patch"}
   - - "@semantic-release/release-notes-generator"
     - "preset": "conventionalcommits"
-      "presetConfig": 
+      "presetConfig":
         "types":
         - {"type": "feat", "section": "Features"}
   - - "@semantic-release/changelog"
-    - "changelogFile": "BaseReleaseNotes.md"
+    - "changelogFile": "ReleaseNotes.md"
   - - "@semantic-release/git"
     - assets:
-        - BaseReleaseNotes.md
-branches: 
- - dev-base
+        - ReleaseNotes.md
+branches:
+ - main
