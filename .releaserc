@@ -12,6 +12,6 @@ plugins:
     - "changelogFile": "BaseReleaseNotes.md"
   - - "@semantic-release/git"
     - assets:
-        - ReleaseNotes.md
+        - BaseReleaseNotes.md
 branches: 
  - dev-base
